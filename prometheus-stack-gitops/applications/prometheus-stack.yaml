@@ -14,7 +14,7 @@ spec:
     targetRevision: 60.3.0
     helm:
       valueFiles:
-        - /home/master/git-project/prometheus-stack-gitops/charts/values-60.yaml
+        - charts/values-60.yaml
   syncPolicy:
     automated:
       prune: true
