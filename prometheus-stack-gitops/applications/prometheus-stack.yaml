@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prometheus-stack
+  namespace: argocd
+spec:
+  destination:
+    namespace: monito
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: 'https://prometheus-community.github.io/helm-charts'
+    chart: kube-prometheus-stack
+    targetRevision: 60.3.0
+    helm:
+      valueFiles:
+        - /home/master/git-project/prometheus-stack-gitops/charts/values-60.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
