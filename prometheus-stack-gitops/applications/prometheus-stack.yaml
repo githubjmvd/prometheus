@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: monito
   source:
-    repoURL: 'https://github.com/githubjmvd/prometheus/prometheus-stack-gitops'
+    repoURL: 'https://github.com/githubjmvd/prometheus-stack-gitops.git'
     targetRevision: main
     path: charts/kube-prometheus-stack
     helm:
