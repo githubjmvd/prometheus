@@ -4,14 +4,14 @@ metadata:
   name: prometheus-stack
   namespace: argocd
 spec:
-  destination:
-    namespace: monito
-    server: https://kubernetes.default.svc
   project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: monito
   source:
-    repoURL: 'https://prometheus-community.github.io/helm-charts'
-    chart: kube-prometheus-stack
-    targetRevision: 60.3.0
+    repoURL: 'https://github.com/githubjmvd/prometheus/prometheus-stack-gitops'
+    targetRevision: main
+    path: charts/kube-prometheus-stack
     helm:
       valueFiles:
         - charts/values-60.yaml

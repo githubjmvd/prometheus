@@ -22,7 +22,6 @@ alertmanager:
 grafana:
   enabled: true
 
-# Disable excessive default rules and monitors to control annotation size
 defaultRules:
   create: false
 
