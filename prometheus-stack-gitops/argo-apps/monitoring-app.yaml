@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/githubjmvd/prometheus-stack-gitops.git'
     targetRevision: HEAD
-    path: apps/monitoring/kube-prometheus-stack
+    path: apps/monitoring/kube-prometheus-stack/
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: monito
